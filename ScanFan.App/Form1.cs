@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ScanFun.BL.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,17 @@ namespace ScanFan.App
 {
     public partial class Form1 : Form
     {
+        private ScanHandler _scanHandler;
         public Form1()
         {
             InitializeComponent();
+            _scanHandler = new ScanHandler(GetScanedData);
         }
 
+        public void GetScanedData(string outputData)
+        {
+            textBox1.Invoke(new Action(() => textBox1.Text = outputData));
+
+        }
     }
 }
