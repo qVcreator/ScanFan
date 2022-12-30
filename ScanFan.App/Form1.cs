@@ -17,7 +17,14 @@ namespace ScanFan.App
         public Form1()
         {
             InitializeComponent();
-            _scanHandler = new ScanHandler(GetScanedData);
+            try
+            {
+                _scanHandler = new ScanHandler(GetScanedData);
+            }
+            catch(Exception)
+            {
+                textBox1.Text = "Сканер не подключен";
+            }
         }
 
         public void GetScanedData(string outputData)
