@@ -17,20 +17,31 @@ namespace ScanFan.App
         public Form1()
         {
             InitializeComponent();
-            try
-            {
-                _scanHandler = new ScanHandler(GetScanedData);
-            }
-            catch(Exception)
-            {
-                textBox1.Text = "Сканер не подключен";
-            }
+            startScanHandle("Сканер не подключен", "сканер подключен");
+        }
+
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+            startScanHandle("Ошибка подключения сканера", "сканер подключен");
         }
 
         public void GetScanedData(string outputData)
         {
             textBox1.Invoke(new Action(() => textBox1.Text = outputData));
 
+        }
+
+        private void startScanHandle(string exceptionMessage, string succesMessage)
+        {
+            try
+            {
+                _scanHandler = new ScanHandler(GetScanedData);
+                textBox1.Text = succesMessage;
+            }
+            catch (Exception)
+            {
+                textBox1.Text = exceptionMessage;
+            }
         }
     }
 }
