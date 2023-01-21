@@ -25,7 +25,15 @@ namespace ScanFun.BL.Services
             _serialPort.RtsEnable = true;
 
             _serialPort.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
+        }
 
+        public void StopScanHandle()
+        {
+            _serialPort.Close();
+        }
+
+        public void StartScanHandle()
+        {
             _serialPort.Open();
         }
 
