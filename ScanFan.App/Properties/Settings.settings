@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ScanFan.App.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PASS" Type="System.String" Scope="User">
+      <Value Profile="(Default)">34-i-04359-0q3of0-q34g-0</Value>
+    </Setting>
+    <Setting Name="SAULT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">perekhod</Value>
+    </Setting>
+    <Setting Name="SECOND_SAULT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">!</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

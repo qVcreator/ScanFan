@@ -35,26 +35,36 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.AutoSize = true;
             this.button1.Location = new System.Drawing.Point(12, 399);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(476, 39);
+            this.button1.Size = new System.Drawing.Size(460, 39);
             this.button1.TabIndex = 1;
             this.button1.Text = "Reload";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ListView_Types
             // 
+            this.ListView_Types.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.ListView_Types.HideSelection = false;
             this.ListView_Types.Location = new System.Drawing.Point(12, 12);
             this.ListView_Types.Name = "ListView_Types";
-            this.ListView_Types.Size = new System.Drawing.Size(476, 379);
+            this.ListView_Types.Size = new System.Drawing.Size(460, 379);
             this.ListView_Types.TabIndex = 2;
             this.ListView_Types.UseCompatibleStateImageBehavior = false;
             // 
             // ListBox_Log
             // 
+            this.ListBox_Log.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ListBox_Log.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ListBox_Log.FormattingEnabled = true;
-            this.ListBox_Log.ItemHeight = 15;
+            this.ListBox_Log.ItemHeight = 25;
             this.ListBox_Log.Location = new System.Drawing.Point(494, 12);
             this.ListBox_Log.Name = "ListBox_Log";
             this.ListBox_Log.Size = new System.Drawing.Size(294, 379);
@@ -71,6 +81,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
